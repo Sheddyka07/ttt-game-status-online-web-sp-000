@@ -29,12 +29,10 @@ end
 end
 
 def full?(board)
-  board.detect do |slot|
-    if slot == " " || slot == nil 
-      return false 
-    else
+  if board.detect{|i| i == " " || i == nil}
+    return false 
+  else
       return true  
-    end
   end 
 end
   
